@@ -11,7 +11,7 @@ application {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(22))
+        languageVersion.set(JavaLanguageVersion.of(23))
     }
 }
 
@@ -41,12 +41,16 @@ distributions {
     }
 }
 
+tasks.compileJava {
+    options.compilerArgs.addAll(listOf("--enable-preview"))
+}
+
 tasks.named<Zip>("scriptsDistZip") {
     archiveFileName.set("${APP_NAME}.zip")
 }
 
 tasks.withType<JavaExec> {
-    jvmArgs = listOf("--source", "22", "--enable-preview")
+    jvmArgs = listOf("--enable-preview")
 }
 
 tasks.named<Test>("test") {
