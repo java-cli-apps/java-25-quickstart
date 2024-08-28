@@ -7,7 +7,12 @@ import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
-import static picocli.CommandLine.getCommandMethods;
+void main(String... args) {
+    var method = CommandLine.getCommandMethods(getClass(), null).getFirst();
+    var commandLine = new CommandLine(method);
+    int exitCode = commandLine.execute(args);
+    System.exit(exitCode);
+}
 
 @Command(name = "PolyglotHello", mixinStandardHelpOptions = true)
 int polyglotHello(
@@ -16,11 +21,4 @@ int polyglotHello(
 ) {
     println(Greeting.byLanguage(language).getGreeting());
     return CommandLine.ExitCode.OK;
-}
-
-void main(String[] args) {
-    var method = getCommandMethods(getClass(), null).get(0);
-    var commandLine = new CommandLine(method);
-    int exitCode = commandLine.execute(args);
-    System.exit(exitCode);
 }
