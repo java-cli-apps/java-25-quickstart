@@ -15,7 +15,7 @@ void main(String... args) {
 }
 
 @Command(name = "PolyglotHello", mixinStandardHelpOptions = true)
-int polyglotHello(
+private int polyglotHello(
         @Option(names = {"-l", "--language"}, required = true, description = "Valid values are: ${COMPLETION-CANDIDATES}")
         Language language
 ) {
