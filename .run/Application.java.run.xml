@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Application.java" type="Application" factoryName="Application">
-    <option name="ALTERNATIVE_JRE_PATH" value="22" />
+    <option name="ALTERNATIVE_JRE_PATH" value="23" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
     <option name="MAIN_CLASS_NAME" value="src/main/java/Application.java" />
     <option name="PROGRAM_PARAMETERS" value="--language=French" />
-    <option name="VM_PARAMETERS" value="--source 22 --enable-preview" />
+    <option name="VM_PARAMETERS" value="--enable-preview" />
     <extension name="com.fapiko.jetbrains.plugins.better_direnv.runconfigs.IdeaRunConfigurationExtension">
       <option name="DIRENV_ENABLED" value="false" />
       <option name="DIRENV_TRUSTED" value="false" />
