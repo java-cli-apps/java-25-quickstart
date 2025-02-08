@@ -41,12 +41,12 @@ distributions {
     }
 }
 
-tasks.compileJava {
-    options.compilerArgs.addAll(listOf("--enable-preview"))
-}
-
 tasks.named<Zip>("scriptsDistZip") {
     archiveFileName.set("${APP_NAME}.zip")
+}
+
+tasks.compileJava {
+    options.compilerArgs.addAll(listOf("--enable-preview"))
 }
 
 tasks.withType<JavaExec> {
