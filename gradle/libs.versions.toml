@@ -1,5 +1,5 @@
 [versions]
-junit-jupiter = "5.11.0"
+junit-jupiter = "5.12.0"
 picocli = "4.7.6"
 
 [libraries]
