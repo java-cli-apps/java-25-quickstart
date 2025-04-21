@@ -1,6 +1,6 @@
 [versions]
 junit-jupiter = "5.12.2"
-picocli = "4.7.6"
+picocli = "4.7.7"
 
 [libraries]
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
