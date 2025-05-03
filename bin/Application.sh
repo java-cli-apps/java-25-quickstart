@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
+get_absolute_path() {
+    case "$1" in
+        /*) path="$1";;
+        *)  path="$(pwd)/$1";;
+    esac
+    realpath "${path}"
+}
+
 get_application_dir() {
-    dirname "$(dirname "$(realpath "$1")")"
+    dirname "$(dirname "$(get_absolute_path "$1")")"
 }
 
 get_application_file() {
