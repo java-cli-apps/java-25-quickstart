@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 
 package: ## Packager l'application dans un fichier .zip
-	./gradlew scriptsDistZip
+	APP_NAME=$(APP_NAME) ./gradlew scriptsDistZip
 
 install: .check-install-dir ## Installer le package de l'application
 	unzip -q -d $(DEST_DIR) $(BUILD)/distributions/$(APP_NAME).zip
