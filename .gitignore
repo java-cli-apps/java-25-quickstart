@@ -7,3 +7,4 @@
 # Ignore build output directories
 build/
 idea-build/
+/.envrc
