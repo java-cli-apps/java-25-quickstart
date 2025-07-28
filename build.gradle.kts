@@ -3,10 +3,7 @@ plugins {
 }
 
 val STARTER_APP = "Application"
-val APP_NAME = System.getenv("APP_NAME")
-require(!APP_NAME.isNullOrBlank()) {
-    "APP_NAME must be set in environment !"
-}
+val APP_NAME = System.getenv("APP_NAME") ?: "QuickStart"
 
 application {
     mainClass.set("src/main/java/${STARTER_APP}.java")
