@@ -1,4 +1,4 @@
-///usr/bin/env java --enable-preview --class-path ${APP_DIR:-.}/lib/'*' "$0" "$@"; exit $?
+//usr/bin/env java --enable-preview --class-path ${APP_DIR:-.}/lib/'*' "$0" "$@"; exit $?
 
 import language.api.Greeting;
 import language.api.Greeting.Language;
