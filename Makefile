@@ -6,10 +6,10 @@ package: ## Packager l'application dans un fichier .zip
 install: .check-install-dir ## Installer le package de l'application
 	unzip -q -d $(DEST_DIR) $(BUILD)/distributions/$(APP_NAME).zip
 
-test: ## Tester l'application localement
+run-app: ## Lancer l'application localement
 	./gradlew run --args="--language French"
 
-test-install: .check-install-dir ## Tester l'application installée
+run-installed-app: .check-install-dir ## Lancer l'application installée
 	PATH=$(DEST_DIR)/$(APP_DIR)/bin:$(PATH) $(APP_NAME).sh --language French
 
 clean: ## Nettoyer le répertoire de build
