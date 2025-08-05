@@ -92,5 +92,5 @@ comme décrit dans la [JEP 330](https://openjdk.org/jeps/330).
 
 ### Sans utiliser Gradle
 
-Si vous ne disposez pas de Gradle ou que vous ne souhaitez pas l'utiliser, vous pouvez utiliser le template [basic-java-22-quickstart](https://github.com/java-cli-apps/basic-java-22-quickstart)
+Si vous ne disposez pas de Gradle ou que vous ne souhaitez pas l'utiliser, vous pouvez utiliser le template [basic-java-23-quickstart](https://github.com/java-cli-apps/basic-java-23-quickstart)
 qui ne requiert que `make` pour construire l'application.
