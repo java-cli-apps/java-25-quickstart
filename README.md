@@ -33,7 +33,18 @@ arguments de la ligne de commande et en effectuer le parsing.
 
 Pour créer une application depuis ce template, on procédera comme suit :
 
-<a href="https://asciinema.org/a/732396" target="_blank"><img src="https://asciinema.org/a/732396.svg" /></a>
+```shell
+#!/usr/bin/env bash
+
+# Définir votre utilisateur GitHub
+read -p "Entrer votre utilisateur GitHub: " user
+
+# Définir le nom du dépot à créer
+read -p "Entrer le nom du dépôt à créer: " repo
+
+# Créer une application java-25-cli-XXXX à partir du template https://github.com/java-cli-apps/java-25-quickstart
+gh repo create ${repo} --public --template git@github.com:java-cli-apps/java-25-quickstart.git
+```
 
 ## Construire votre application
 
