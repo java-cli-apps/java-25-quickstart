@@ -1,24 +1,26 @@
-//usr/bin/env java --enable-preview --class-path ${APP_DIR:-.}/lib/'*' "$0" "$@"; exit $?
+//usr/bin/env java --class-path ${APP_DIR:-.}/lib/'*' "$0" "$@"; exit $?
 
-import language.api.Greeting;
-import language.api.Greeting.Language;
+import dev.nipafx.args.Args;
 
-import picocli.CommandLine;
-import picocli.CommandLine.Command;
-import picocli.CommandLine.Option;
+import static java.lang.IO.println;
 
 void main(String... args) {
-    var method = CommandLine.getCommandMethods(getClass(), null).getFirst();
-    var commandLine = new CommandLine(method);
-    int exitCode = commandLine.execute(args);
-    System.exit(exitCode);
+    try {
+        sayHello(Args.parse(args, ParsedArgs.class));
+    } catch (Exception exception) {
+        printHelp();
+        throw new RuntimeException(exception);
+    }
 }
 
-@Command(name = "PolyglotHello", mixinStandardHelpOptions = true)
-private int polyglotHello(
-        @Option(names = {"-l", "--language"}, required = true, description = "Valid values are: ${COMPLETION-CANDIDATES}")
-        Language language
-) {
-    println(Greeting.byLanguage(language).getGreeting());
-    return CommandLine.ExitCode.OK;
+void sayHello(ParsedArgs parsedArgs) {
+    if (parsedArgs.hasHelpFlag()) {
+        printHelp();
+    } else {
+        println(parsedArgs.getLanguage().getGreeting());
+    }
+}
+
+void printHelp() {
+    println("Usage: Application [--language %s | %s] [--help]".formatted(Language.French, Language.English));
 }

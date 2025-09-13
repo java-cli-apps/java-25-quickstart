@@ -12,6 +12,9 @@ run-app: ## Lancer l'application localement
 run-installed-app: .check-install-dir ## Lancer l'application installée
 	PATH=$(DEST_DIR)/$(APP_DIR)/bin:$(PATH) $(APP_NAME).sh --language French
 
+test: ## Exécuter les tests
+	./gradlew test
+
 clean: ## Nettoyer le répertoire de construction
 	rm --force --recursive $(BUILD)
 

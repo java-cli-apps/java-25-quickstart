@@ -11,12 +11,12 @@ application {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(23))
+        languageVersion.set(JavaLanguageVersion.of(25))
     }
 }
 
 dependencies {
-    implementation(libs.picocli)
+    implementation(libs.record.args)
     testImplementation(libs.junit.jupiter)
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
@@ -43,14 +43,6 @@ distributions {
 
 tasks.named<Zip>("scriptsDistZip") {
     archiveFileName.set("${APP_NAME}.zip")
-}
-
-tasks.compileJava {
-    options.compilerArgs.addAll(listOf("--enable-preview"))
-}
-
-tasks.withType<JavaExec> {
-    jvmArgs = listOf("--enable-preview")
 }
 
 tasks.named<Test>("test") {
