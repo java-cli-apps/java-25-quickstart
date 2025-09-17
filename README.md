@@ -2,7 +2,7 @@
 
 Le template **java-25-quickstart** permet de démarrer une nouvelle application en commande ligne avec Java et Gradle.
 
-Ce template utilise les JEPs suivantes :
+Ce template nécessite d'utiliser Java 25 ou une version supérieure car il utilise les JEPs suivantes :
 
 * La [JEP 458: Launch Multi-File Source-Code Programs](https://openjdk.org/jeps/458) qui permet de lancer un programme
   Java dont le code est réparti dans plusieurs fichiers sources sans avoir besoin de les compiler préalablement
