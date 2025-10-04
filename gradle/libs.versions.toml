@@ -1,6 +1,6 @@
 [versions]
 record-args = "0.9.3"
-junit-jupiter = "5.13.4"
+junit-jupiter = "5.14.0"
 
 [libraries]
 record-args = { module = "dev.nipafx.args:record-args", version.ref = "record-args" }
