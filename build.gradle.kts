@@ -22,7 +22,7 @@ dependencies {
 }
 
 distributions {
-    create("scripts") {
+    register("scripts") {
         contents {
             from("src/main/java") {
                 include("**/*.java")
