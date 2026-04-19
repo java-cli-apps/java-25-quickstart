@@ -15,7 +15,12 @@ class LanguageTest {
     }
 
     @Test
-    void getGreetingTest() {
-        assertEquals("Bonjour 🇫🇷", Language.French.greet(), "Incorrect greeting returned");
+    void frenchGreetTest() {
+        assertEquals("Bonjour 🇫🇷", Language.French.greet(), "Incorrect greet returned");
+    }
+
+    @Test
+    void englishGreetTest() {
+        assertEquals("Hello 🇬🇧", Language.English.greet(), "Incorrect greet returned");
     }
 }
