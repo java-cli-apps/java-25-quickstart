@@ -1,3 +1,3 @@
-public interface Greeter {
+interface Greeter {
     String greet();
 }
