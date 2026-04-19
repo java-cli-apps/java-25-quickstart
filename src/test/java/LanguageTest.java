@@ -2,7 +2,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class LanguageTest {
 
@@ -15,6 +16,6 @@ class LanguageTest {
 
     @Test
     void getGreetingTest() {
-        assertEquals("Bonjour 🇫🇷", Language.French.getGreeting(), "Incorrect greeting returned");
+        assertEquals("Bonjour 🇫🇷", Language.French.greet(), "Incorrect greeting returned");
     }
 }
